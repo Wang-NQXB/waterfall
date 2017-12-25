@@ -12,10 +12,10 @@ export default function waterfall (container, mb = 15, mr = 15) {
 
     const els = [].map.call(container.children, el => {
         el.style.position = 'absolute'
-    el.querySelector('img').onload = () => {
-        clearTimeout(debounceTimer)
-        debounceTimer = setTimeout(() => {waterfall(container, mb, mr)}, 200)
-    }
+        el.querySelector('img').onload = () => {
+            clearTimeout(debounceTimer)
+            debounceTimer = setTimeout(() => {waterfall(container, mb, mr)}, 200)
+        }
 
     return el
 })
